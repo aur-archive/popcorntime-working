@@ -1,0 +1,12 @@
+post_install() {
+	post_upgrade
+	sudo ln -s /usr/share/popcorntime/Popcorn-Time /bin/popcorntime
+	echo "You will have to reload your path (reboot terminal emulator) to use popcorntime"
+}
+
+post_upgrade() {
+	echo
+	echo "WARNING: Popcorn Time streams movies from Torrents"
+	echo "Downloading copyrighted material may be illegal in your country!"
+	echo "Use at your own risk!"
+}
